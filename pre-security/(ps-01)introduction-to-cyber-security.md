@@ -1,8 +1,16 @@
-###### PS &mdash; 01
+<section class="hero">
+  <h6>PS &mdash; 01</h6>
+  <div align="center">
+    <h2>
+      Introduction to Cyber Security
+    </h2>
+    <p>
+      Welcome to <strong>Pre Security</strong>, the <strong>Introduction to Cyber Security</strong> section of the course, this sections notes cover, <strong><a href="#offensive-security-intro">Offensive</a></strong>, <strong><a href="#defensive-security-intro">Defensive</a></strong> & <strong><a href="#careers-in-cyber">Careers</a></strong> within Cyber Security.
+    </p>
+  </div>
+</section>
 
-### Introduction to Cyber Security
-
-Welcome to __Pre Security / Introduction to Cyber Security__, this sections notes cover, __[Offensive](#offensive-security-intro)__, __[Defensive](#defensive-security-intro)__ & __[Careers](#careers-in-cyber)__ within Cyber Security.
+<hr>
 
 ### Offensive Security Intro
 #### **Task 1** &mdash; What is Offensive Security?
