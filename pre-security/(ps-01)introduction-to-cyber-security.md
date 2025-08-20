@@ -1,5 +1,5 @@
 <section class="hero">
-  <h6>PS &mdash; 01</h6>
+  <h6 align="right">PS &mdash; 01</h6>
   <div align="center">
     <h2>
       Introduction to Cyber Security
