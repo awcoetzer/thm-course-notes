@@ -75,6 +75,33 @@ Here are a few careers within Offensive security roles:
 
 ### Defensive Security Intro
 
+###### Task 1 &mdash; Introduction to Defensive Security
+
+Defensive security is the counterpart to Offensive security, often known as the **Blue Team**. Defensive security is concerned with two main tasks:
+
+- Preventing intrusions from occurring
+- Detecting intrusions when they occur and responding properly
+
+Some of the tasks related to defensive security are:
+
+- User cyber security awareness
+- Documenting & managing assets
+- Updating & patching systems
+- Setting up preventative security devices
+- Setting logging & monitoring devices
+
+There is much more to Defensive security, though apart from above defensive security will also cover:
+
+- Security Operations Center (SOC)
+- Threat Intelligence
+- Digital Forensics & Incident Response (DFIR)
+- Malware Analysis
+
+**Answer the questions below** <br>
+Which team focuses on defensive security?
+
+- [x] Blue Team
+
 <hr>
 
 ### Careers in Cyber
