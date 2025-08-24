@@ -105,3 +105,13 @@ Which team focuses on defensive security?
 <hr>
 
 ### Careers in Cyber
+
+There are various different careers in Cyber Security, and they either fall under the Red or Blue teams.
+
+- Security Analyst
+- Security Engineer
+- Incident Responder
+- Digital Forensics Examiner
+- Malware Analyst
+- Penetration Tester
+- Red Teamer
