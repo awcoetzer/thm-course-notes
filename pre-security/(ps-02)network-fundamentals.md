@@ -324,7 +324,7 @@ Finally, what is the last DHCP packet that is sent to a device from a DHCP serve
 
 The OSI Model, stands for the **Open Systems Communication** _reference_ model. Reference model, being that it was never implemented in the real world, instead the **TCP/IP** model is being used. 
 
-However, the OSI Model is a create way of presenting how data flows on a network. Take it as a guide as to how networks operate. Below is a table showcasing the OSI Model.
+However, the OSI Model is a great way of presenting how data flows on a network. Take it as a guide as to how networks operate. Below is a table showcasing the OSI Model.
 
 #### OSI Model Table
 |Data|Layer #|Layer Name|Phrase|
