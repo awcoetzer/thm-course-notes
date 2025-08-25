@@ -316,7 +316,7 @@ What type of DHCP packet does a device send once it has been offered an IP addre
 - [x] DHCP Request
 
 Finally, what is the last DHCP packet that is sent to a device from a DHCP server?
--[x] DHCP ACK
+- [x] DHCP ACK
 
 <hr>
 
