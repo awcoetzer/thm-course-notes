@@ -324,20 +324,54 @@ Finally, what is the last DHCP packet that is sent to a device from a DHCP serve
 
 The OSI Model, stands for the **Open Systems Communication** _reference_ model. Reference model, being that it was never implemented in the real world, instead the **TCP/IP** model is being used. 
 
-However, the OSI Model is a great way of presenting how data flows on a network. Take it as a guide as to how networks operate. Below is a table showcasing the OSI Model.
+However, the OSI Model is a great way of presenting how data flows on a network. Take it as a guide as to how networks operate. Below is a table showcasing the OSI Model. Something to remember is that the OSI Model breaks downs the complex tasks of computer to computer communication in 7 layers and that layers 7 to 4 are know as the **Host Layers** and 3 to 1 the **Media Layers**
 
 #### OSI Model Table
 |Data|Layer #|Layer Name|Phrase|
 |:---|---:|:---|:---|
-|**DATA**|**7**|**Application Layer** <br> _Network Process to Application_|**A**way|
-|**DATA**|**6**|**Presentation Layer** <br> _Data Representation & Encryption_|**P**izza|
-|**DATA**|**5**|**Session Layer** <br> _Interhost Communication_|**S**ausage|
-|**SEGMENT**|**4**|**Transport Layer** <br> _End to End Connection & Reliability_|**T**hrow|
-|**PACKET**|**3**|**Network Layer** <br> _Path Determination & IP (Logical Addressing)_|**N**ot|
-|**FRAME**|**2**|**Data Link Layer** <br> _MAC and LLC (Physical Addressing)_|**D**o|
-|**BIT**|**1**|**Physical Layer** <br> _Media, Signal & Binary Transmissions_|**P**lease|
+|**DATA**|_Host_ **7**|**Application Layer** <br> _Network Process to Application_|**A**way|
+|**DATA**|_Host_ **6**|**Presentation Layer** <br> _Data Representation & Encryption_|**P**izza|
+|**DATA**|_Host_ **5**|**Session Layer** <br> _Interhost Communication_|**S**ausage|
+|**SEGMENT**|_Host_ **4**|**Transport Layer** <br> _End to End Connection & Reliability_|**T**hrow|
+|**PACKET**|_Media_ **3**|**Network Layer** <br> _Path Determination & IP (Logical Addressing)_|**N**ot|
+|**FRAME**|_Media_ **2**|**Data Link Layer** <br> _MAC and LLC (Physical Addressing)_|**D**o|
+|**BIT**|_Media_ **1**|**Physical Layer** <br> _Media, Signal & Binary Transmissions_|**P**lease|
 
 > 💡 **Note:** _There is a saying you can use to help remember the different layers within the OSI Model, that being, "**P**lease **D**o **N**ot **T**hrow **S**ausage **P**izza **A**way"_.
+
+Even though this is about the **OSI Model**, its good to know how the data would essentially flow from one device to another, then also taking a quick look at the **TCP/IP Model** and comparing that side by side with the OSI Model. 
+
+Firstly, Lets look at how the OSI Model will flow if one device sent an email as an example to another. 
+
+#### OSI Model Flow Example
+|Computer #1||||Computer #2|
+|:---:|:---:|:---:|:---:|:---:|
+|Application Layer|&darr;||&uarr;|Application Layer|
+|Presentation Layer|&darr;||&uarr;|Presentation Layer|
+|Session Layer|&darr;||&uarr;|Session Layer|
+|Transport Layer|&darr;||&uarr;|Transport Layer|
+|Network Layer|&darr;||&uarr;|Network Layer|
+|Data Link Layer|&darr;||&uarr;|Data Link Layer|
+|Physical Layer|&rarr;|&rarr;|&rarr;|Physical Layer|
+
+
+#### TCP/IP Model Table
+Next is a quick look at the TCP/IP Model, which only consists of four layers and how both the OSI and TCP/IP models compare.
+
+|Layers|
+|:---|
+|**Application** Layer <br> _FTP, NFS, SNMP, SMTP, HTTP, POP3_|
+|**Transport** Layer <br> _TCP/UDP_|
+|**Internet** Layer <br> _IP, ARP_|
+|**Network Interface** Layer <br> _Ehternet, Token Ring_|
+
+#### Model Comparison
+|TCP/IP||OSI Model|
+|:---|:---:|:---|
+|**Application** Layer|&larr;|**• Application** Layer <br> **• Presentation** Layer <br> **• Session** Layer|
+|**Transport** Layer|&larr;|**• Transport** Layer|
+|**Internet** Layer|&larr;|**• Network** Layer|
+|**Network Interface** Layer|&larr;|**• Data Link** Layer <br> **• Physical** Layer|
 
 <hr>
 
