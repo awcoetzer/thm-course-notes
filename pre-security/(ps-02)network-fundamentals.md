@@ -322,6 +322,8 @@ Finally, what is the last DHCP packet that is sent to a device from a DHCP serve
 
 ### OSI Model
 
+#### **Task 1** &mdash; What is the OSI Model?
+
 The OSI Model, stands for the **Open Systems Communication** _reference_ model. Reference model, being that it was never implemented in the real world, instead the **TCP/IP** model is being used. 
 
 However, the OSI Model is a great way of presenting how data flows on a network. Take it as a guide as to how networks operate. Below is a table showcasing the OSI Model. Something to remember is that the OSI Model breaks downs the complex tasks of computer to computer communication in 7 layers and that layers 7 to 4 are know as the **Host Layers** and 3 to 1 the **Media Layers**
@@ -372,6 +374,37 @@ Next is a quick look at the TCP/IP Model, which only consists of four layers and
 |**Transport** Layer|&larr;|**• Transport** Layer|
 |**Internet** Layer|&larr;|**• Network** Layer|
 |**Network Interface** Layer|&larr;|**• Data Link** Layer <br> **• Physical** Layer|
+
+<br>
+
+#### **Task 2** &mdash; Physical
+
+<br>
+
+#### **Task 3** &mdash; Data Link
+
+<br>
+
+#### **Task 4** &mdash; Network
+
+<br>
+
+#### **Task 5** &mdash; Transport
+
+<br>
+
+#### **Task 6** &mdash; Session
+
+<br>
+
+#### **Task 7** &mdash; Presentation
+
+<br>
+
+#### **Task 8** &mdash; Application
+
+<br>
+
 
 <hr>
 
