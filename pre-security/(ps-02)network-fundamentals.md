@@ -326,7 +326,20 @@ Finally, what is the last DHCP packet that is sent to a device from a DHCP serve
 
 The OSI Model, stands for the **Open Systems Communication** _reference_ model. Reference model, being that it was never implemented in the real world, instead the **TCP/IP** model is being used. 
 
-However, the OSI Model is a great way of presenting how data flows on a network. Take it as a guide as to how networks operate. Below is a table showcasing the OSI Model. Something to remember is that the OSI Model breaks downs the complex tasks of computer to computer communication in 7 layers and that layers 7 to 4 are know as the **Host Layers** and 3 to 1 the **Media Layers**
+However, the OSI Model is a great way of presenting how data flows on a network. Take it as a guide as to how networks operate. Below is a table showcasing the OSI Model. Something to remember is that the OSI Model breaks downs the complex tasks of computer to computer communication in 7 layers and that layers 7 to 4 are know as the **Host Layers** and 3 to 1 the **Media Layers**.
+
+What is important to take note of is that at every layer data travels through, a specific process takes place, where a piece of data is added. This process is known as **encapsulation**. Think of
+it as, when a file _(or any data)_ is sent from one device to another, it doesn’t travel as-is.
+
+Instead, as the data goes down the OSI layers _(from the application layer down to the physical layer)_, each layer adds its own “header” _(and sometimes a footer)_ with extra information.
+
+This is like wrapping your data in several envelopes:
+- Application layer → your message _(the raw data)_.
+- Transport layer → adds port numbers _(so the right app gets it)_.
+- Network layer → adds IP addresses _(so it knows where to go)_.
+- Data link layer → adds MAC addresses and error-check info.
+- Physical layer → turns it into electrical signals, light pulses, or radio waves.
+
 
 #### OSI Model Table
 |Data|Layer #|Layer Name|Phrase|
@@ -375,33 +388,46 @@ Next is a quick look at the TCP/IP Model, which only consists of four layers and
 |**Internet** Layer|&larr;|**• Network** Layer|
 |**Network Interface** Layer|&larr;|**• Data Link** Layer <br> **• Physical** Layer|
 
-<br>
+**Answer the questions below** <br>
+What does the "OSI" in "OSI Model" stand for?
+- [x] Open Systems Communication
 
-#### **Task 2** &mdash; Physical
+How many layers (in digits) does the OSI model have?
+- [x] 7
 
-<br>
+What is the key term for when pieces of information get added to data?
+- [x] Encapsulation
 
-#### **Task 3** &mdash; Data Link
-
-<br>
-
-#### **Task 4** &mdash; Network
-
-<br>
-
-#### **Task 5** &mdash; Transport
 
 <br>
 
-#### **Task 6** &mdash; Session
+#### **Task 2** &mdash;Layer 1 - Physical
+
+
 
 <br>
 
-#### **Task 7** &mdash; Presentation
+#### **Task 3** &mdash;Layer 2 - Data Link
 
 <br>
 
-#### **Task 8** &mdash; Application
+#### **Task 4** &mdash;Layer 3 - Network
+
+<br>
+
+#### **Task 5** &mdash;Layer 4 - Transport
+
+<br>
+
+#### **Task 6** &mdash;Layer 5 - Session
+
+<br>
+
+#### **Task 7** &mdash;Layer 6 - Presentation
+
+<br>
+
+#### **Task 8** &mdash;Layer 7 - Application
 
 <br>
 
