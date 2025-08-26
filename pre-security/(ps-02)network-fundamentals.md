@@ -527,6 +527,19 @@ What protocol would an application that streams video use?
 
 #### **Task 6** &mdash; Layer 5 - Session
 
+Once data has been formatted from the presentation layer, the session layer will then begin to create and maintain the connection to other computers for which the data is destined. When a connection is established, so is a session created, whilst the connection is active, so is the session.
+
+The session layer is also responsible for closing the connection if it hasn't been used in while or if lost. Sessions can also contain checkpoints, where if the data is lost, only the newest pieces of data are required to be sent, saving bandwidth.
+
+Sessions are unique, data cannot travel over different sessions.
+
+**Answer the questions below** <br>
+What is the name of this layer?
+- [x] Session
+
+What is the technical term for when a connection is successfully established?
+- [x] Session
+
 <br>
 
 #### **Task 7** &mdash; Layer 6 - Presentation
