@@ -435,6 +435,28 @@ What is the name of the piece of hardware that all networked devices come with?
 
 #### **Task 4** &mdash; Layer 3 - Network
 
+This layer handles the routing and re-assembly of data. Routing simply determines the most optimal path the data should be sent. While some protocols determine the optimal path data should take to reach a device, we should only be aware of them at this stage. These protocols include OSPF, which stands for  Open Shortest Path First and RIP, Routing Information Protocol.
+
+The factors by which a route is taken is determined by, what path is shortest, what path is the most reliable and which path has the faster physical connection.
+
+As mentioned before, This layer deals with Ip Addresses such as 192.168.1.100, where as Layer 2 Data Link, deals with the physical MAC Address. Devices such as routers capable of delivering packets using IP Addresses are known as Layer 3 devices as they able to work with the third layer in the OSI Model.
+
+**Answer the questions below** <br>
+What is the name of this Layer?
+- [x] Network
+
+Will packets take the most optimal route across a network? (Y/N)
+- [x] Y
+
+What does the acronym "OSPF" stand for?
+- [x] Open Shortest Path First
+
+What does the acronym "RIP" stand for?
+- [x] Routing Information Protocol
+
+What type of addresses are dealt with at this layer?
+- [x] IP Addresses
+
 <br>
 
 #### **Task 5** &mdash; Layer 4 - Transport
