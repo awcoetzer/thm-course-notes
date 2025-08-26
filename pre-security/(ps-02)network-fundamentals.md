@@ -400,7 +400,7 @@ What is the key term for when pieces of information get added to data?
 
 <br>
 
-#### **Task 2** &mdash;Layer 1 - Physical
+#### **Task 2** &mdash; Layer 1 - Physical
 
 This is the lowest layer in the model and the easiest to grasp, this layer references physical components of the hardware used in networking. The devices use electrical signals to transfer data between each other in a binary Numbering system (1's and 0's). An example of this can be Ethernet cables.
 
@@ -414,31 +414,42 @@ What is the name of the numbering system that is both 0's and 1's?
 What is the name of the cables that are used to connect devices?
 - [x] Ethernet Cables
 
+<br>
 
+#### **Task 3** &mdash; Layer 2 - Data Link
+
+The Data Link Layer, focuses on the physical addressing of the transmission. It will receive a packet from the Network Layer, which includes the IP Address for the remote computer and will add in the Physical MAC Address of the receiving endpoint. Inside every network-enabled computer is a NIC, or Network Interface Card, which comes with a unique MAC Address to identify it.
+
+MAC Addresses are set by the manufacturer and literally burnt into the card, hence why its like a fingerprint, it cannot be changed, It can however be spoofed. When information is sent across within the same Network (LAN), its actually the physical address that is used to identify where exactly to send the information even though the IP Address is still there. 
+
+When you need to send data outside your LAN, the IP address is what identifies the correct destination network and host. In addition to the Data Link Layer, Its the job of the data link layer to present the data in a formation suitable for transmission.
+
+**Answer the questions below** <br>
+What is the name of this Layer?
+- [x] Data Link
+
+What is the name of the piece of hardware that all networked devices come with?
+- [x] Network Interface Card
 
 <br>
 
-#### **Task 3** &mdash;Layer 2 - Data Link
+#### **Task 4** &mdash; Layer 3 - Network
 
 <br>
 
-#### **Task 4** &mdash;Layer 3 - Network
+#### **Task 5** &mdash; Layer 4 - Transport
 
 <br>
 
-#### **Task 5** &mdash;Layer 4 - Transport
+#### **Task 6** &mdash; Layer 5 - Session
 
 <br>
 
-#### **Task 6** &mdash;Layer 5 - Session
+#### **Task 7** &mdash; Layer 6 - Presentation
 
 <br>
 
-#### **Task 7** &mdash;Layer 6 - Presentation
-
-<br>
-
-#### **Task 8** &mdash;Layer 7 - Application
+#### **Task 8** &mdash; Layer 7 - Application
 
 <br>
 
