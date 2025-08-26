@@ -544,12 +544,30 @@ What is the technical term for when a connection is successfully established?
 
 #### **Task 7** &mdash; Layer 6 - Presentation
 
+The Presentation layers is where standardization starts to take place, because software developers can develop any software such as an email client differently to another email client, the data still needs to be handled in the same way, it doesn't matter how the software works.
+
+This layer acts as a translator for data to and from the application layer. The receiving computer will also understand the data being sent. An example being, when sending an email, another computer will also understand how to display that email.
+
+Security features such as HTTPS occur at this layer.
+
+**Answer the questions below** <br>
+What is the name of this Layer?
+- [x] Presentation
+
+What is the main purpose that this Layer acts as?
+- [x] Translator
+
 <br>
 
 #### **Task 8** &mdash; Layer 7 - Application
 
-<br>
+The application layer is the layer in which protocols and rules are in place to determine how the user should interact with data sent or received. This is the layer that we are most familiar with, that being the GUI, or Graphical User Interface, this layer also contain other layers such as the DNS layer, or Domain Name System.
 
+What is the name of this Layer?
+- [x] Application
+
+What is the technical term that is given to the name of the software that users interact with?
+- [x] Graphical User Interface
 
 <hr>
 
