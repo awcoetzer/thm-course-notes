@@ -398,10 +398,21 @@ How many layers (in digits) does the OSI model have?
 What is the key term for when pieces of information get added to data?
 - [x] Encapsulation
 
-
 <br>
 
 #### **Task 2** &mdash;Layer 1 - Physical
+
+This is the lowest layer in the model and the easiest to grasp, this layer references physical components of the hardware used in networking. The devices use electrical signals to transfer data between each other in a binary Numbering system (1's and 0's). An example of this can be Ethernet cables.
+
+**Answer the questions below** <br>
+What is the name of this Layer?
+- [x] Physical
+
+What is the name of the numbering system that is both 0's and 1's?
+- [x] Binary
+
+What is the name of the cables that are used to connect devices?
+- [x] Ethernet Cables
 
 
 
