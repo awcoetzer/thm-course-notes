@@ -743,3 +743,107 @@ Even though these protocols follow a standard, you can administer applications t
 <hr>
 
 ### Extending your Network
+
+#### **Task 1** &mdash; Introduction to Port Forwarding
+
+Port forwarding is essential for connecting applications and services to the internet. Without it, applications and services such as web servers are only available to devices within the same direct network, thus, known as the Intranet. Port forwarding opens specifics ports. Port forwarding is configured at the router of a network.
+
+**Answer the questions below** <br>
+What is the name of the device that is used to configure port forwarding?
+- [x] Router
+
+<br>
+
+#### **Task 2** &mdash; Firewalls 101
+
+A firewall is a device within a network responsible for determining what traffic is allowed to enter and exit. An Admin can configure a firewall to **Permit** or **Deny** traffic from entering or existing a network based on various factors such as:
+
+- Where the traffic is coming from?
+    - _Has the firewall been told to accept/deny traffic from a specific network?_
+- Where is the traffic going to?
+    - _Has the firewall been told to accept/deny traffic destined for a specific network?_
+- What port is the traffic for?
+    - Has the firewall been told to accept/deny traffic destined for port 80 only?
+- What protocol is the traffic using?
+    - _Has the firewall been told to accept/deny traffic that is UDP, TCP or both?_
+
+Firewalls comes in all shapes and sizes, it ranges from dedicated hardware such as IPS or Intrusion Prevention Systems, to Software such as [Snort](https://www.snort.org/). Firewalls can be categorised into 2 to 5 categories.
+
+The two primary categories are:
+
+|Firewall Category|Description|
+|:---:|:---:|
+|Stateful|This type of firewall uses the entire information from a connection; rather than inspecting an individual packet, this firewall determines the behaviour of a device based upon the entire connection.
+
+This firewall type consumes many resources in comparison to stateless firewalls as the decision making is dynamic. For example, a firewall could allow the first parts of a TCP handshake that would later fail.
+
+If a connection from a host is bad, it will block the entire device.|
+|Stateless|This firewall type uses a static set of rules to determine whether or not individual packets are acceptable or not. For example, a device sending a bad packet will not necessarily mean that the entire device is then blocked.
+
+Whilst these firewalls use much fewer resources than alternatives, they are much dumber. For example, these firewalls are only effective as the rules that are defined within them. If a rule is not exactly matched, it is effectively useless.
+
+However, these firewalls are great when receiving large amounts of traffic from a set of hosts (such as a Distributed Denial-of-Service attack)|
+
+**Answer the questions below** <br>
+What layers of the OSI model do firewalls operate at?
+
+For this answer, just provide the numbers in ascending order, separated by an ampersand (&) I.e: 4 & 5
+- [x] 3 & 4
+
+What category of firewall inspects the entire connection?
+- [x] Stateful
+
+What category of firewall inspects individual packets?
+- [x] Stateless
+
+<br>
+
+#### **Task 3** &mdash; Practical - Firewall
+
+This is practical held on THM, no notes here apart from the answer to the question asked.
+
+**Answer the questions below** <br>
+What is the flag?
+- [x] THM{FIREWALLS_RULE}
+
+<br>
+
+#### **Task 4** &mdash; VPN Basics
+
+A VPN or Virtual Private Network is a technology that allows devices on separate networks to communicate securely by creating a dedicated path between each other over the internet, this is known as a **tunnel**, devices connected within this tunnel form their own private network. A VPN can allow two offices to be connected.
+
+VPN's allow networks in different geographical locations to be connected, they Offer Privacy and anonymity. VPN technology has improved, we can explore some existing technologies below:
+
+|VPN Tacknology|Description|
+|:---:|:---:|
+|PPP|This technology is used by PPTP (explained below) to allow for authentication and provide encryption of data. VPNs work by using a private key and public certificate (similar to SSH). A private key & certificate must match for you to connect.
+
+This technology is not capable of leaving a network by itself (non-routable).|
+|PPTP|The Point-to-Point Tunneling Protocol (PPTP) is the technology that allows the data from PPP to travel and leave a network. 
+
+PPTP is very easy to set up and is supported by most devices. It is, however, weakly encrypted in comparison to alternatives.|
+|IPSec|Internet Protocol Security (IPsec) encrypts data using the existing Internet Protocol (IP) framework.
+
+IPSec is difficult to set up in comparison to alternatives; however, if successful, it boasts strong encryption and is also supported on many devices.|
+
+**Answer the questions below** <br>
+What VPN technology only encrypts & provides the authentication of data?
+- [x] PPP
+
+What VPN technology uses the IP framework?
+- [x] IPSec
+
+<br>
+
+#### **Task 5** &mdash; What is a Router?
+
+Its a routers job to connect networks and pass data between them, it does this by using **routing**. Routing is the label given to the process of data travelling across networks. Routing involves creating a path between networks so that this data can be successfully delivered. Routing also determines the shortest path, remember **OSPF**.
+
+There is more on this topic but its already been covered earlier, no need to repeat it.
+
+**Answer the questions below** <br>
+What is the verb for the action that a router does?
+- [x] Routing
+
+What are the two different layers of switches? Separate these by a comma I.e.: Layer X,Layer Y
+- [x] Layer 2,Layer 3
