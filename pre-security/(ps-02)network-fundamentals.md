@@ -573,6 +573,173 @@ What is the technical term that is given to the name of the software that users 
 
 ### Packets & Frames
 
+#### **Task 1** &mdash; What are Packets and Frames
+
+Packets and frames are small pieces data that when formed togather make up a larger piece of data. However they are two different things within the OSI model. The Packet is from layer 3 or Network layer of the OSI Model, which contain information such as the IP Header and payload. A Frame is from the Data Link layer or Layer 2 of the OSI Model and this encapsulates the Packet adding more data such as the MAC Address.
+
+Using the analogy of mailing a letter through the post, the envelope is the frame which is used to move the contents, in this case the packet to another place. Once the recepient opens the envelop or frame, they will know where to forward the letter or packet, itself. This is known as encapsulation.
+
+Packets are an efficient way of sending data across networked devices, Because this data is exchanged in small pieces, there is less chance of bottlenecking occuring across a network than large messages being sent at once. An example of this is when loading an image from a website, this image is not sent to your computer as a whole, but rather small pieces where it is reconstructed when it reaches your computer.
+
+Networking is full of standards and protocols that act as a set of rules for how the packet is handled on a device. Continuing with the internet protocol example, a packet using this protocol will have a set of headers that contain additional information to the daya that is being sent across a network.
+
+|Header|Description|
+|:---:|:---:|
+|Time to Live (TTL)|Sets an expiry timer, so that the packet does not clog up your network if it doesnt reach the host or escapes|
+|Checksum|Provies integrity checking for protocols such as TCP/IP. If any data is changed, this value will be different from what was expected and therefore corrupt.|
+|Source Address|The IP Address of the device that the packet is being **from** so that data knows where to **return to**|
+|Destination Address|The Devices IP address the packet is being sent to so that the data knows where to travel next|
+
+**Answer the questions below** <br>
+What is the name for a piece of data when it does have IP addressing information?
+- [x] Packet
+
+What is the name for a piece of data when it does not have IP addressing information?
+- [x] Frame
+
+<br>
+
+#### **Task 2** &mdash; TCP/IP (The Three-Way Handshake)
+
+We recently had a look at the TCP/IP Model/Protocol, this protocol is very similar to the OSI Model however it only consists of four layers and is arguably just a summed up version of the OSI Model.
+
+#### TCP/IP Model/Protocol
+
+|Layers|
+|:---:|
+|Application|
+|Transport|
+|Internet|
+|Network Interface|
+
+As data moves through the TCP/IP models layers, similar to the OSI model, data is **encapsulated**, the reverse of this is **decapsulation**. The defining feature of TCP/IP is that it is **connection-based**, this meaning that TCP establishes a connection between both a client and a device acting as a server **before** data is sent. Due to this, TCP guarentees that any data sent will be received on the other end. This process is known as the **Three-way Handshake**
+
+
+TCP Packets contain various sections of information known as headers that are added from encapsulation.
+
+|Header|Description|
+|:---:|:---:|
+|Source Port|This value is the port opened by the sender to send the TCP packet from. This value is chosen randomly (out of the ports from 0-65535 that aren't already in use at the time).|
+|Destination Port|This value is the port number that an application or service is running on the remote host (the one receiving data); for example, a webserver running on port 80. Unlike the source port, this value is not chosen at random.|
+|Source IP|This is the IP address of the device that is sending the packet.|
+|Destination IP|	This is the IP address of the device that the packet is destined for.|
+|Sequence Number|When a connection occurs, the first piece of data transmitted is given a random number. We'll explain this more in-depth further on.|
+|Acknowledgement Number|After a piece of data has been given a sequence number, the number for the next piece of data will have the sequence number + 1. We'll also explain this more in-depth further on.|
+|Checksum|This value is what gives TCP integrity. A mathematical calculation is made where the output is remembered. When the receiving device performs the mathematical calculation, the data must be corrupt if the output is different from what was sent.|
+|Data|This header is where the data, i.e. bytes of a file that is being transmitted, is stored.|
+|Flag|This header determines how the packet should be handled by either device during the handshake process. Specific flags will determine specific behaviours, which is what we'll come on to explain below.|
+
+|Step|Message|Description|
+|:---:|:---:|:---:|
+|1|SYN|A SYN message is the initial packet sent by a client during the handshake. This packet is used to initiate a connection and synchronise the two devices together |
+|2|SYN/ACK|This packet is sent by the receiving device (server) to acknowledge the synchronisation attempt from the client.|
+|3|ACK|The acknowledgement packet can be used by either the client or server to acknowledge that a series of messages/packets have been successfully received.|
+|4|DATA|Once a connection has been established, data (such as bytes of a file) is sent via the "DATA" message.|
+|5|FIN|This packet is used to cleanly (properly) close the connection after it has been complete.|
+|#|RST|This packet abruptly ends all communication. This is the last resort and indicates there was some problem during the process. For example, if the service or application is not working correctly, or the system has faults such as low resources. |
+
+Any sent data is given a random number sequence and is reconstructed using this number sequence and incrementing by 1. Both computers must agree on the same number sequence for data to be sent in the correct order. This order is agreed upon during three steps:
+
+1. SYN - Client: Here's my Initial Sequence Number(ISN) to SYNchronise with (0)
+2. SYN/ACK - Server: Here's my Initial Sequence Number (ISN) to SYNchronise with (5,000), and I ACKnowledge your initial number sequence (0)
+3. ACK - Client: I ACKnowledge your Initial Sequence Number (ISN) of (5,000), here is some data that is my ISN+1 (0 + 1)
+
+|Device|Initial Number Sequence (ISN)|Final Number Sequence|
+|:---:|:---:|:---:|
+|Client (Sender)|0|0+1=1|
+|Client (Sender)|1|1+1=2|
+|Client (Sender)|2|2+1=3|
+
+#### TCP Closing a Connection
+
+TCP will close a connection once a device has determined that the other device has successfully received all of the data. Because TCP reserves system resources on a device, its best practice to close TCP Connections as soon as possible. To initiate a Closure of a TCP, the device will send a **FIN** packet to the other device, of course with TCP the other device will also have to acknowledge this packet.
+
+**Answer the questions below** <br>
+What is the header in a TCP packet that ensures the integrity of data?
+- [x] Checksum
+
+Provide the order of a normal Three-way handshake (with each step separated by a comma)
+- [x] SYN,SYN/ACK,ACK
+
+<br>
+
+#### **Task 3** &mdash; Practical Handshake
+
+This is a table version of the practical lab on THM, between to people called **Human TCP Connection**
+
+Help Alice and Bob communicate by re-assembling the TCP handshake in the correct order in the static lab attached to this task!
+
+|Alice|||Bob|
+|:---:|:---:|:---:|:---:|
+|SYN: Can you hear me Bob?|&rarr;|||
+|||&larr;|SYN/ACK: Yes, I can hear you!|
+|ACK: Okay Great|&rarr;|||
+|DATA: Cheesecake on sale!|&rarr;|||
+|||&larr;|ACK:I hear ya!|
+|FIN/ACK: I'm all done|&rarr;|||
+|||&larr;|FIN/ACK:Yeah, Me too!|
+|ACK: Okay, Goodbye|&rarr;|||
+
+**Answer the questions below** <br>
+What is the value of the flag given at the end of the conversation?
+- [x] THM{TCP_CHATTER}
+
+<br>
+
+#### **Task 4** &mdash; UDP/IP
+
+
+The User Datagram Protocol, or UDP is a stateless protocol, meaning it doesnt do a Three-way hanshake, there is no synchronization between devices. UDP Is used in scenarios where losing data or connection is not an end all, such as video streaming or voice chat.
+
+UDP Packets are simpler than that of TCP and thus has fewer headers as shown in the table below:
+
+|Header|Description|
+|:---:|:---:|
+|Time to Live (TTL)|This field sets an expiry timer for the packet, so it doesn't clog up your network if it never manages to reach a host or escape!|
+|Source Address|The IP address of the device that the packet is being sent from, so that data knows where to return to.|
+|Destination Address|The device's IP address the packet is being sent to so that data knows where to travel next.|
+|Source Port|This value is the port that is opened by the sender to send the UDP packet from. This value is randomly chosen (out of the ports from 0-65535 that aren't already in use at the time).|
+|Destination Port|This value is the port number that an application or service is running on the remote host (the one receiving the data); for example, a webserver running on port 80. Unlike the source port, this value is not chosen at random.|
+|Data|This header is where data, i.e. bytes of a file that is being transmitted, is stored.|
+
+Headers not included here are **Sequence Number**, **Acknowledgement Number**, **Checksum** & **Flag**.
+
+**Answer the questions below** <br>
+What does the term "UDP" stand for?
+- [x] User Datagram Protocol
+
+What type of connection is "UDP"?
+- [x] Stateless
+
+What protocol would you use to transfer a file?
+- [x] TCP
+
+What protocol would you use to have a video call?
+- [x] UDP
+
+<br>
+
+#### **Task 5** &mdash; Ports 101
+
+Perhaps aptly titled by their name, ports are an essential point in which data can be exchanged. Think of a harbour and port. Ships wishing to dock at the harbour will have to go to a port compatible with the dimensions and the facilities located on the ship. When the ship lines up, it will connect to a port at the harbour. Take, for instance, that a cruise liner cannot dock at a port made for a fishing vessel and vice versa.
+
+Ports enforce where what can park, networking devices also use ports to engorce strict rules when communicating with one another. When a connection has been has been established, and data sent or received will be sent through these ports. Ports can range from 0-65535.
+
+Due to ports ranging to such a high number, there can run a risk of losing tracak of what application is using what port. Thankfully we associate application, software and behaviours with a standard set of rules. Meaning, enforcing that any web browser data is sent over port 80, Software Developers can design a web browser such as Google Chrome or Firefox to interpret the data the same way as one another. This means that all web browser now share a common rule.
+
+While the stand rule for web data is port 80, there are a few other protocols that have been allocated a standard rule. Any port that is within 0 and 1024, is known as a common port.
+
+|Protocol|Port Number|Description|
+|:---:|:---:|:---:|
+|File Transfer Protocol (FTP)|21|This protocol is used by a file-sharing application built on a client-server model, meaning you can download files from a central location.|
+|Secure Shell (SSH)|22|	This protocol is used to securely login to systems via a text-based interface for management.|
+|HyperText Transfer Protocol (HTTP)|80|This protocol powers the World Wide Web (WWW)! Your browser uses this to download text, images and videos of web pages.|
+|HyperText Transfer Protocol Secure (HTTPS)|443|This protocol does the exact same as above; however, securely using encryption.|
+|Server Message Block (SMB)|445|This protocol is similar to the File Transfer Protocol (FTP); however, as well as files, SMB allows you to share devices like printers.|
+|Remote Desktop Protocol (RDP)|3389|This protocol is a secure means of logging in to a system using a visual desktop interface (as opposed to the text-based limitations of the SSH protocol).|
+
+Even though these protocols follow a standard, you can administer applications that interact wth these protocols on a different port other than what is the standard, an example being you can run a web server on port 8080 instead of port 80. Note, however, applications will presume that the standard is being followed, so you will have to provide a colon (:) along with the port number.
+
 <hr>
 
 ### Extending your Network
